@@ -28,7 +28,7 @@
 
 #include <AH/Arduino-Wrapper.h>
 
-#ifdef USBCON
+#if defined(USBCON) && !defined(ARDUINO_ARCH_STM32)
 #include "USBMIDI_MIDIUSB.ipp"
 #endif
 

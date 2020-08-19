@@ -1,7 +1,9 @@
 #pragma once
 
 #include "MIDI_Interface.hpp"
+#if !defined(ARDUINO_ARCH_STM32)
 #include "USBMIDI/USBMIDI.hpp"
+#endif
 #include <AH/Error/Error.hpp>
 #include <AH/Teensy/TeensyUSBTypes.hpp>
 #include <MIDI_Parsers/USBMIDI_Parser.hpp>
@@ -18,7 +20,7 @@ AH_DIAGNOSTIC_WERROR()
 #endif
 
 // If the main MCU has a USB connection or is a Teensy with MIDI USB type
-#if defined(USBCON) || defined(TEENSY_MIDIUSB_ENABLED) || !defined(ARDUINO)
+#if (defined(USBCON) || defined(TEENSY_MIDIUSB_ENABLED) || !defined(ARDUINO)) && !defined(ARDUINO_ARCH_STM32)
 
 BEGIN_CS_NAMESPACE
 

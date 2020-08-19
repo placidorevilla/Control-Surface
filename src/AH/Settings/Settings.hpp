@@ -23,7 +23,9 @@ BEGIN_AH_NAMESPACE
 /// Use `#define DEBUG_OUT Serial` to print debugging information to the serial
 /// monitor.  
 /// @note   Printing debug information can slow down the program dramatically.
+#ifndef DEBUG_OUT
 #define DEBUG_OUT
+#endif
 // #define DEBUG_OUT Serial
 
 /// Exit when encountering an error, instead of trying to recover (recommended).
