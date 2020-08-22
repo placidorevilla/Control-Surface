@@ -56,7 +56,7 @@ DoublyLinkedList<ExtendedIOElement> &ExtendedIOElement::getAll() {
     return updatables;
 }
 
-pin_t ExtendedIOElement::offset = NUM_DIGITAL_PINS + NUM_ANALOG_INPUTS;
+pin_t ExtendedIOElement::offset = NUM_DIGITAL_PINS + NUM_ANALOG_INPUTS + AH_EXT_OFFSET;
 
 END_AH_NAMESPACE
 

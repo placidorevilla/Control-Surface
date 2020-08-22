@@ -15,7 +15,8 @@ AH_DIAGNOSTIC_POP()
 
 BEGIN_AH_NAMESPACE
 
-#define AH_EXT_PIN(x) (x + NUM_DIGITAL_PINS + NUM_ANALOG_INPUTS)
+#define AH_EXT_OFFSET 16
+#define AH_EXT_PIN(x) (x + NUM_DIGITAL_PINS + NUM_ANALOG_INPUTS + AH_EXT_OFFSET)
 
 namespace detail {
 constexpr static auto tmp_HIGH = HIGH;
