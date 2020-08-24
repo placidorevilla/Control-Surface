@@ -63,7 +63,7 @@ constexpr uint8_t ADC_BITS = ADC_RESOLUTION;
  * 
  * @see FilteredAnalog
  */
-constexpr uint8_t ANALOG_FILTER_SHIFT_FACTOR = 2;
+constexpr uint8_t ANALOG_FILTER_SHIFT_FACTOR = 4;
 
 /** 
  * The unsigned integer type to use for analog inputs during filtering.
